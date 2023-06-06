@@ -1,0 +1,192 @@
+$primary: #ffbf69;
+$secondary: #cbf3f0;
+$text-dark: #000;
+$text-light: #fff;
+$dark: #333333;
+
+* {
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background: $primary;
+    padding: 20px;
+
+    &__wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            margin: 0;
+            font-weight: 500;
+            font-size: .8rem;
+        }
+
+        &__nav {
+            display: flex;
+            gap: 40px;
+
+            &__link {
+                color: $text-dark;
+                text-decoration: none;
+                font-size: .8rem;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.hero {
+    background: $primary center / contain no-repeat url("./assets/background.png");
+    padding: 20px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper {
+        max-width: 1440px;
+        width: 100%;
+
+        &__title {
+            font-size: 6rem;
+            font-weight: 900;
+            margin: 0;
+            color: $text-light;
+        }
+
+        &__text {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: $text-light;
+            margin: 0 0 60px 0;
+        }
+    }
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    background: $primary;
+    color: $text-dark;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    &--secondary {
+        background: $secondary;
+    }
+
+    &--lg {
+        font-size: 1.2rem;
+        width: 250px;
+        height: 50px;
+    }
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.section {
+    padding: 100px;
+
+    &__wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+
+        &--sm {
+            max-width: 1000px;
+        }
+
+        &--t-center {
+            text-align: center;
+        }
+
+        &--flex{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            @media (max-width: 1100px) {
+                display: block;
+            }
+        }
+    }
+
+    &--secondary {
+        background: $secondary;
+    }
+
+    &--bg-img{
+        background: center / contain no-repeat url("./assets/bg-grid.png");
+    }
+}
+
+.product-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 40px;
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        &__img{
+            width: 150px;
+            height: 150px;
+        }
+        &__title{
+            font-weight: 500;
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+}
+
+.rules__img{
+    width: 500px;
+    height: auto;
+    @media (max-width: 1100px) {
+        width: 100%;
+    }
+}
+
+.footer{
+    background: $dark;
+    padding: 25px;
+    &__wrapper{
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__title{
+            font-size: .8rem;
+            color: $text-light;
+            font-weight: 600;
+        }
+        &__link{
+            color: $text-light;
+            font-weight: 400;
+            text-decoration: none;
+            font-size: .8rem;
+        }
+    }
+}

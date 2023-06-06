@@ -16,11 +16,23 @@
 <header class="header">
    <div class="header__wrapper">
       <h3 class="header__wrapper__title">NOT_A_BUBBLE.COM</h3>
-      <nav class="header__wrapper__nav">
-         <a class="header__wrapper__nav__link" href="#">About</a>
-         <a class="header__wrapper__nav__link" href="#">Sale</a>
-         <a class="header__wrapper__nav__link" href="#">Contacts</a>
+      <nav id="mobileMenu" class="header__wrapper__nav">
+         <button id="closeMenuBtn" class="header__wrapper__nav__close-btn">X</button>
+         <ul class="header__wrapper__nav__list">
+            <li class="header__wrapper__nav__list__item">
+               <a class="header__wrapper__nav__list__item__link" href="#">About</a>
+            </li>
+            <li class="header__wrapper__nav__list__item">
+               <a class="header__wrapper__nav__list__item__link" href="#">Sale</a>
+            </li>
+            <li class="header__wrapper__nav__list__item">
+               <a class="header__wrapper__nav__list__item__link" href="#">Contacts</a>
+            </li>
+         </ul>
       </nav>
+      <button id="mobileMenuBtn" class="header__wrapper__nav__menu-btn">
+         <img src="assets/menu.svg" alt="menu">
+      </button>
    </div>
 </header>
 <section class="hero">
@@ -50,13 +62,13 @@
             <button class="btn">Buy</button>
          </div>
          <div class="product-list__item">
-            <img src="assets/amongus.png" alt="Among Us, marbled" width="380" height="380"
+            <img src="assets/amongus.png" alt="Among Us, marbled" width="564" height="564"
                  class="product-list__item__img">
             <h3 class="product-list__item__title">Among Us, marbled</h3>
             <button class="btn">Buy</button>
          </div>
          <div class="product-list__item">
-            <img src="assets/round.png" alt="Multicolored rounc" width="380" height="380"
+            <img src="assets/round.png" alt="Multicolored rounc" width="513" height="514"
                  class="product-list__item__img">
             <h3 class="product-list__item__title">Multicolored rounc</h3>
             <button class="btn">Buy</button>
@@ -87,5 +99,6 @@
       <a class="footer__wrapper__link" href="#">Contacts</a>
    </div>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>

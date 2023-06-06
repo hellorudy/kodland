@@ -31,19 +31,70 @@ body {
         }
 
         &__nav {
-            display: flex;
-            gap: 40px;
+            @media(max-width: 768px) {
+                display: flex;
+                width: 150px;
+                position: absolute;
+                right: -200px;
+                top: 20px;
+                padding: 20px;
+                border-radius: 10px 0 0 10px;
+                background: $secondary;
+                transition: all .3s;
+                &__close-btn {
+                    display: none;
+                    height: 30px;
+                    background: $primary;
+                    border: none;
+                    margin-top: 15px;
+                    @media(max-width: 768px) {
+                        display: block;
+                    }
+                }
+                &--active {
+                    right: 0;
+                }
+            }
 
-            &__link {
-                color: $text-dark;
-                text-decoration: none;
-                font-size: .8rem;
-                text-transform: uppercase;
-                font-weight: 500;
+            &__list {
+                display: flex;
+                gap: 40px;
+                list-style: none;
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+
+                &__item {
+                    &__link {
+                        color: $text-dark;
+                        text-decoration: none;
+                        font-size: .8rem;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &__menu-btn {
+                width: 50px;
+                height: 50px;
+                background: transparent;
+                border: none;
+                display: none;
+                @media (max-width: 768px) {
+                    display: block;
+                }
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }
+
 }
+
 
 .hero {
     background: $primary center / contain no-repeat url("./assets/background.png");
@@ -117,7 +168,7 @@ body {
             text-align: center;
         }
 
-        &--flex{
+        &--flex {
             display: flex;
             align-items: center;
             gap: 50px;
@@ -131,28 +182,31 @@ body {
         background: $secondary;
     }
 
-    &--bg-img{
+    &--bg-img {
         background: center / contain no-repeat url("./assets/bg-grid.png");
     }
 }
 
-.product-list{
+.product-list {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-top: 50px;
     flex-wrap: wrap;
     gap: 40px;
-    &__item{
+
+    &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        &__img{
+
+        &__img {
             width: 150px;
             height: 150px;
         }
-        &__title{
+
+        &__title {
             font-weight: 500;
             font-size: 1rem;
             margin: 0;
@@ -160,7 +214,7 @@ body {
     }
 }
 
-.rules__img{
+.rules__img {
     width: 500px;
     height: auto;
     @media (max-width: 1100px) {
@@ -168,21 +222,24 @@ body {
     }
 }
 
-.footer{
+.footer {
     background: $dark;
     padding: 25px;
-    &__wrapper{
+
+    &__wrapper {
         max-width: 1440px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &__title{
+
+        &__title {
             font-size: .8rem;
             color: $text-light;
             font-weight: 600;
         }
-        &__link{
+
+        &__link {
             color: $text-light;
             font-weight: 400;
             text-decoration: none;
